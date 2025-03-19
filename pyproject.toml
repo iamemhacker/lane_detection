@@ -1,0 +1,21 @@
+[project]
+name = "lane-detection"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Elior Malul",email = "elior@orcavision.company"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    numpy=2.2.4,
+    opencv-python=4.11.0.86
+]
+
+[tool.poetry]
+packages = [{include = "lane_detection", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
