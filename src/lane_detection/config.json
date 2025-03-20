@@ -1,0 +1,15 @@
+{
+    "edges": {
+        "low_th": 350,
+        "hi_th": 400
+    },
+    "lines": {
+        "threshold": 120,
+        "min_line_length": 75,
+        "max_line_gap": 30
+    },
+    "clustering": {
+        "threshold": 10,
+        "slope_cutoff": 0.9
+    }
+}
