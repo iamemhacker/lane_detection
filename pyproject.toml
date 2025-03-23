@@ -23,4 +23,4 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-test = "pytest tests"
+test = "run_tests:main"

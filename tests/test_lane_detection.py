@@ -10,12 +10,16 @@ from lane_detection import detect  # noqa E402
 
 
 def test_lane_detect():
-    data_dir = on.getenv("TSET_DIR")
+    data_dir = os.getenv("TSET_DIR")
     if data_dir is None:
         print("Environment variable TSET_DIR is not set")
         assert False
+    test_path = os.path.join(
+        data_dir,
+        "input.mp4"
+    )
     counter = 0
-    gen = detect(TEST_FILE)
+    gen = detect(test_path)
     while True:
         try:
             frame, lines = next(gen)
