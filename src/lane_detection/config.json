@@ -1,7 +1,7 @@
 {
     "edges": {
-        "low_th": 350,
-        "hi_th": 400
+        "low_th": 300,
+        "hi_th": 350
     },
     "lines": {
         "threshold": 120,

@@ -10,7 +10,8 @@ requires-python = ">=3.11"
 dependencies = [
     "scipy (>=1.15.2,<2.0.0)",
     "opencv-python (>=4.11.0.86,<5.0.0.0)",
-    "scikit-learn (>=1.6.1,<2.0.0)"
+    "scikit-learn (>=1.6.1,<2.0.0)",
+    "pytest (>=8.3.5,<9.0.0)"
 ]
 
 [tool.poetry]
@@ -20,3 +21,6 @@ packages = [{include = "lane_detection", from = "src"}]
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+test = "pytest tests"
