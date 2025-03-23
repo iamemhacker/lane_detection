@@ -8,11 +8,12 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__),
                                                 '..', 'src')))
 from lane_detection import detect  # noqa E402
 
-# TODO: replace.
-TEST_FILE = "/Users/eliormalul/work/auto-counter/_training_sets/fly-stands-multi/input.mp4"
-
 
 def test_lane_detect():
+    data_dir = on.getenv("TSET_DIR")
+    if data_dir is None:
+        print("Environment variable TSET_DIR is not set")
+        assert False
     counter = 0
     gen = detect(TEST_FILE)
     while True:
